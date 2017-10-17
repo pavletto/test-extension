@@ -1,0 +1,28 @@
+.container {
+	display:  flex;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+}
+.authorize{
+	background: #d10b0f; 
+    display: block;
+    height: $height;
+    padding: 0;
+    width: 191px;
+    background: none;
+    margin: auto;
+    border: 2px solid #d10b0f;
+    font-size: 18px;
+    font-family: "Lato";
+    color: #d10b0f;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+
+  
+}
+.authorize:hover{
+      background: #d10b0f;
+      color: white;
+    }

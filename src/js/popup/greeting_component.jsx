@@ -4,12 +4,12 @@ import Authorize from "./Authorize"
 
 export default class extends React.Component {
   componentDidUpdate(prevProps, prevState) {
-  console.log(chrome.oauth2.getToken()) 
-    
+		console.log(123)    
   }
   render () {
     return (
       <Authorize /> 
-    )
+
+    ) 
   }
 }; 

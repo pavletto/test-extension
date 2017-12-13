@@ -19,12 +19,11 @@ if (fileSystem.existsSync(secretsPath)) {
 var options = {
   entry: {
     popup: path.join(__dirname, "src", "js", "popup.js"),
-    jsx: path.join(__dirname, "src", "js", "popup"),
+    // popup: path.join(__dirname, "src", "js", "popup"),
     inject: path.join(__dirname, "src", "js", "inject.js"),
     token: path.join(__dirname, "src", "js", "token.js"),
     oauth: path.join(__dirname, "src", "js", "oauth.js"),
-    options: path.join(__dirname, "src", "js", "options.js"),
-    background: path.join(__dirname, "src", "js", "background.js")
+    options: path.join(__dirname, "src", "js", "options.js")
   },
   output: {
     path: path.join(__dirname, "build"),
@@ -68,6 +67,11 @@ var options = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(env.NODE_ENV)
     }),
+        new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "popup.html"),
+      filename: "oauth.html",
+      chunks: []
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "popup.html"),
       filename: "popup.html",
@@ -78,11 +82,7 @@ var options = {
       filename: "options.html",
       chunks: ["options"]
     }),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "background.html"),
-      filename: "background.html",
-      chunks: ["background"]
-    }),
+
     new WriteFilePlugin()
   ]
 };

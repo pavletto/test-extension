@@ -5,24 +5,26 @@
 	width: 500px;
 }
 .authorize{
-	background: #d10b0f; 
     display: block;
-    height: $height;
+    height: 50px;
+    width: 50px;
     padding: 0;
-    width: 191px;
-    background: none;
+    background: #d10b0f;
     margin: auto;
     border: 2px solid #d10b0f;
     font-size: 18px;
     font-family: "Lato";
-    color: #d10b0f;
+    color: white;
     cursor: pointer;
+    border-radius: 25px;
     outline: none;
     text-align: center;
+    font-weight: 600;
+    font-size: 25px;
 
   
 }
 .authorize:hover{
-      background: #d10b0f;
-      color: white;
+      color: #d10b0f;
+      background: white;
     }

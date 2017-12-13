@@ -1,6 +1,4 @@
 import React from "react";
-import Oauth2 from "./oauth";
-// import icon from "../../img/icon-128.png"
 
 export default class Authorize extends React.Component {
 	constructor(props) {
@@ -10,12 +8,19 @@ export default class Authorize extends React.Component {
 	authorize () {
     window.oauth2.start();
   }
+  mouseOver(a,b) {
+    console.log(a,b)
+  }
+  mouseOut (a,b) {
+    console.log(a,b);
+  } 
 
-  render () {
+  render () { 
     return (
       <div className="container">
-        <button className="authorize" onClick={this.authorize}>Авторизация</button>
+        <button className="authorize" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} onClick={this.authorize}>hh</button>
       </div>
     )
   }
 };
+
